@@ -24,7 +24,11 @@ const app = express();
 // Middlewares
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: [
+            'http://localhost:5173',
+            'https://reimagined-fishstick-v69vx7j79rxx3wj9x-3000.app.github.dev/',
+            'https://reimagined-fishstick-v69vx7j79rxx3wj9x-5173.app.github.dev'
+        ],
         credentials: true,
     }),
 );

@@ -2,7 +2,9 @@
 import axios from 'axios';
 
 // --- Configuração Base ---
-const API_BASE_URL = 'http://localhost:3000';
+const USE_LOCALHOST = false; // Mudar para 'true' se não estiver usando GitHub Codespaces
+const API_BASE_URL = USE_LOCALHOST ? 'http://localhost:3000' 
+    : 'https://reimagined-fishstick-v69vx7j79rxx3wj9x-3000.app.github.dev/';
 
 export const api = axios.create({
     baseURL: API_BASE_URL,
