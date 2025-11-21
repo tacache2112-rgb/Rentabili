@@ -97,3 +97,24 @@ export const createWallet = (walletData) =>
 export const updateWallet = (id, walletData) =>
     handleHTTP(api.put(`/wallets/${id}`, walletData));
 export const deleteWallet = (id) => handleHTTP(api.delete(`/wallets/${id}`));
+
+// 📈 Actives Routes
+export const getActives = () => handleHTTP(api.get('/actives'));
+export const createActive = (activeData) =>
+    handleHTTP(api.post('/actives', activeData));
+export const getActiveById = (id) => handleHTTP(api.get(`/actives/${id}`));
+export const updateActive = (id, activeData) =>
+    handleHTTP(api.put(`/actives/${id}`, activeData));
+export const deleteActive = (id) => handleHTTP(api.delete(`/actives/${id}`));
+
+// ⏳ Historical Balances Routes
+export const createHistoricalBalance = (balanceData) =>
+    handleHTTP(api.post('/historical-balances', balanceData));
+export const getHistoricalBalancesByActive = (activeId) =>
+    handleHTTP(api.get(`/historical-balances/active/${activeId}`));
+export const getHistoricalBalanceById = (id) =>
+    handleHTTP(api.get(`/historical-balances/${id}`));
+export const updateHistoricalBalance = (id, balanceData) =>
+    handleHTTP(api.put(`/historical-balances/${id}`, balanceData));
+export const deleteHistoricalBalance = (id) =>
+    handleHTTP(api.delete(`/historical-balances/${id}`));

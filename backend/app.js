@@ -12,6 +12,8 @@ import transactionsRouter from './routes/transactions.js';
 import walletsRouter from './routes/wallets.js';
 import authRouter from './routes/auth.js';
 import dashboardRouter from './routes/dashboard.js';
+import activesRouter from './routes/actives.js';
+import historicalBalancesRouter from './routes/historicalBalances.js';
 
 // Log para verificar se o .env está sendo lido
 console.log('🔧 Configuração do ambiente:');
@@ -44,6 +46,8 @@ app.use('/transactions', transactionsRouter);
 app.use('/wallets', walletsRouter);
 app.use('/auth', authRouter);
 app.use('/dashboard', dashboardRouter);
+app.use('/actives', activesRouter);
+app.use('/historical-balances', historicalBalancesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

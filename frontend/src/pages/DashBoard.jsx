@@ -27,6 +27,12 @@ function Sidebar({ aoSair }) {
                     Investimentos
                 </a>
                 <a
+                    onClick={() => navigate('/actives')}
+                    style={{ cursor: 'pointer' }}
+                >
+                    Ativos
+                </a>
+                <a
                     onClick={() => navigate('/relatorios')}
                     style={{ cursor: 'pointer' }}
                 >
